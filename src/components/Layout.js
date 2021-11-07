@@ -3,10 +3,10 @@ import NavBar from './NavBar'
 
 import Footer from './Footer'
 
-const Layout = ({children}) => {
+const Layout = ({onMenuItemClick ,children}) => {
     return (
         <>
-          <NavBar />
+          <NavBar onClick={onMenuItemClick}/>
           {children}
           <Footer />  
         </>
