@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const NavBar = () => {
   const [isActive, setIsActive] = useState(false)
+  
+  const handleClick = (e) => {
+    e.target.className= 'current'
+  }
 
   const handleScroll = () => {
     const scrollTop = window.pageYOffset
@@ -23,13 +27,13 @@ const NavBar = () => {
     return (
         <nav className={isActive ? "nav active" : "nav"}>
         <div className="container">
-          <h1 className="logo"><NavLink to="/">Faisal Karimi</NavLink></h1>
-          <ul>
-            <li><NavLink to="#" className="current">Home</NavLink></li>
-            <li><NavLink to="#">About</NavLink></li>
-            <li><NavLink to="#">Projects</NavLink></li>
-            <li><NavLink to="#">Hobby</NavLink></li>
-            <li><NavLink to="#">Contact</NavLink></li>
+          <h1 className="logo"><Link to="/">Faisal Karimi</Link></h1>
+          <ul onClick={handleClick}>
+            <li><Link to="/" >Home</Link></li>
+            <li><Link to="/about" >About</Link></li>
+            <li><Link to="/projects" >Projects</Link></li>
+            <li><Link to="/hobby" >Hobby</Link></li>
+            <li><Link to="/contact" >Contact</Link></li>
           </ul>
         </div>
       </nav>

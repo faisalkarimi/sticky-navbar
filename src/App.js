@@ -1,12 +1,21 @@
 import './App.css';
-import Layout from './components/Layout';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Home from './components/Home';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from './components/screens/Home';
+import About from './components/screens/About';
+import Projects from './components/screens/Projects';
+import Hobby from './components/screens/Hobby';
+import Contact from './components/screens/Contact';
 
 function App() {
   return (
     <Router>
-      <Layout />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/about" element={<About />} />
+        <Route exact path="/projects" element={<Projects />} />
+        <Route exact path="/hobby" element={<Hobby />} />
+        <Route exact path="/contact" element={<Contact />} />
+      </Routes>
     </Router>
   );
 }

@@ -65,6 +65,10 @@ body {
   color: #c0392b;
   font-weight: bold;
 }
+.current {
+  color: #c0392b;
+  font-weight: bold;
+}
 
 .hero {
   background-image: url("https://images.unsplash.com/photo-1490810194309-344b3661ba39?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2048&q=80");
@@ -113,6 +117,9 @@ body {
   color: #555;
   line-height: 30px;
   letter-spacing: 1.2px;
+}
+pages {
+  margin-top: 6rem;
 }
 .footer {
   background-color: #222;

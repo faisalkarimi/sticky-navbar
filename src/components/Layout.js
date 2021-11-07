@@ -1,15 +1,13 @@
 import React from 'react'
-import Content from './Content'
-import Footer from './Footer'
-import Hero from './Hero'
 import NavBar from './NavBar'
 
-const Layout = () => {
+import Footer from './Footer'
+
+const Layout = ({children}) => {
     return (
         <>
           <NavBar />
-          <Hero />
-          <Content />
+          {children}
           <Footer />  
         </>
     )
